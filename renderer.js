@@ -3,6 +3,22 @@ const func = async () => {
 
     console.log(response) // prints out 'pong'
   }
+  
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0px";
+}
+document.getElementById('closeBtn').addEventListener('click', function (e) {
+  e.preventDefault(); // prevent default anchor behavior
+  closeNav();
+});
+document.getElementById('myBtn').addEventListener('click', function () {
+  openNav();
+});
 function demoA () {
 // (PART A) FETCH CSV FROM SERVER
     Papa.parse("./data/prem_table.csv", {
