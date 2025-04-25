@@ -18,7 +18,9 @@ class BootstrapAPI {
     }
     async getLeagueData() {
         let data = await this.fetchData();
-
         return data['teams'];
     }
 }
+
+let t = new BootstrapAPI;
+
