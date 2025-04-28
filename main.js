@@ -14,7 +14,7 @@ const createWindow = () => {
     if(isDev){
         win.webContents.openDevTools()  
     }
-
+    
     win.loadFile('index.html')
 }
 
