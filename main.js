@@ -1,36 +1,48 @@
-const { app, BrowserWindow, ipcMain } = require('electron/main')
-const path = require('node:path')
-const isDev = process.env.NODE_ENV !== 'development';
+const { app, BrowserWindow, ipcMain, nativeTheme } = require("electron/main");
+const path = require("node:path");
+const isDev = process.env.NODE_ENV !== "development";
 
 const createWindow = () => {
-    const win = new BrowserWindow({
-        title: 'SportsDashboard',
-        width: isDev ? 1000 : 500,
-        height: 600,
-        webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
-            }
-    })
-    if(isDev){
-        win.webContents.openDevTools()  
-    }
-    
-    win.loadFile('index.html')
-}
+  const win = new BrowserWindow({
+    title: "SportsDashboard",
+    width: isDev ? 1000 : 500,
+    height: 600,
+    webPreferences: {
+      preload: path.join(__dirname, "preload.js"),
+    },
+  });
+  if (isDev) {
+    win.webContents.openDevTools();
+  }
+
+  win.loadFile("index.html");
+};
+ipcMain.handle("dark-mode:toggle", () => {
+  if (nativeTheme.shouldUseDarkColors) {
+    nativeTheme.themeSource = "light";
+  } else {
+    nativeTheme.themeSource = "dark";
+  }
+  return nativeTheme.shouldUseDarkColors;
+});
+
+ipcMain.handle("dark-mode:system", () => {
+  nativeTheme.themeSource = "system";
+});
 
 app.whenReady().then(() => {
-    ipcMain.handle('ping', () => 'pong')
-    createWindow()
+  ipcMain.handle("ping", () => "pong");
+  createWindow();
 
-    app.on('activate', () => {
+  app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
+      createWindow();
     }
-  })
-})
+  });
+});
 
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
+    app.quit();
   }
-})
+});
