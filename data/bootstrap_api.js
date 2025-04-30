@@ -18,9 +18,19 @@ class BootstrapAPI {
     }
     async getLeagueData() {
         let data = await this.fetchData();
+        //console.log(data['teams'])
         return data['teams'];
     }
+
+    async getPlayerData() {
+        let data = await this.fetchData();
+        //console.log(data['elements'])
+        return data['elements'];
+    }
+
+    
 }
 
 let t = new BootstrapAPI;
+t.getPlayerData()
 
