@@ -2,20 +2,7 @@ const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
 const isDev = process.env.NODE_ENV !== 'development';
 
-const fs = require("fs");
-const { parse } = require("csv-parse");
 
-fs.createReadStream("./data/prem_table.csv")
-  .pipe(parse({ delimiter: ",", from_line: 2 }))
-  .on("data", function (row) {
-    console.log(row);
-  })
-  .on("end", function () {
-    console.log("finished");
-  })
-  .on("error", function (error) {
-    console.log(error.message);
-  });
 const createWindow = () => {
     const win = new BrowserWindow({
         title: 'SportsDashboard',
