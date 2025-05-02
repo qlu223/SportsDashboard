@@ -3,17 +3,38 @@ const func = async () => {
 
   console.log(response); // prints out 'pong'
 };
+function openSettings() {
+  ipcRenderer.send("open-settings");
+}
+window.addEventListener("DOMContentLoaded", () => {
+  const settingsBtn = document.getElementById("settingsButton");
+
+  settingsBtn.addEventListener("click", () => {
+    window.electronAPI.openSettings();
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const returnButton = document.getElementById("return");
+
+  if (returnButton) {
+    // Listen for button click
+    returnButton.addEventListener("click", () => {
+      // Send IPC message to the main process to load 'index.html'
+      ipcRenderer.send("go-back");
+    });
+  } else {
+    console.error("Return button not found!");
+  }
+});
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
-
-/* Set the width of the side navigation to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0px";
 }
 document.getElementById("closeBtn").addEventListener("click", function (e) {
-  e.preventDefault(); // prevent default anchor behavior
+  e.preventDefault();
   closeNav();
 });
 document.getElementById("myBtn").addEventListener("click", function () {
