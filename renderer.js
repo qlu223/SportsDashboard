@@ -19,18 +19,13 @@ document.getElementById("closeBtn").addEventListener("click", function (e) {
 document.getElementById("myBtn").addEventListener("click", function () {
   openNav();
 });
+
 document
   .getElementById("toggle-dark-mode")
   .addEventListener("click", async () => {
     const isDarkMode = await window.darkMode.toggle();
   });
 
-document
-  .getElementById("reset-to-system")
-  .addEventListener("click", async () => {
-    await window.darkMode.system();
-    document.getElementById("theme-source").innerHTML = "System";
-  });
 //https://devncoffee.com/display-csv-in-html-table-with-javascript/
 function demoA() {
   // (PART A) FETCH CSV FROM SERVER
@@ -41,7 +36,7 @@ function demoA() {
     // (PART B) DRAW CSV FILE
     complete: (csv) => {
       // (B1) GET + RESET HTML TABLE
-      var table = document.getElementById("hi");
+      var table = document.getElementById("team");
       table.innerHTML = "";
 
       // (B2) DRAW TABLE ROWS
