@@ -52,6 +52,9 @@ h6{
 .filters{
     padding: 10px;
 }
+#settingsButton{
+    padding: 10px;
+}
 #toggle-dark-mode{
     border: 0;
     background: transparent;

@@ -13,19 +13,6 @@ window.addEventListener("DOMContentLoaded", () => {
     window.electronAPI.openSettings();
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const returnButton = document.getElementById("return");
-
-  if (returnButton) {
-    // Listen for button click
-    returnButton.addEventListener("click", () => {
-      // Send IPC message to the main process to load 'index.html'
-      ipcRenderer.send("go-back");
-    });
-  } else {
-    console.error("Return button not found!");
-  }
-});
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
