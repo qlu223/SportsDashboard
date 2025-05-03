@@ -1,7 +1,9 @@
+
 const { app, BrowserWindow, ipcMain, nativeTheme } = require("electron/main");
 const path = require("node:path");
 const isDev = process.env.NODE_ENV !== "development";
 let win;
+
 const createWindow = () => {
   win = new BrowserWindow({
     title: "SportsDashboard",
@@ -55,3 +57,5 @@ app.on("window-all-closed", () => {
     app.quit();
   }
 });
+
+

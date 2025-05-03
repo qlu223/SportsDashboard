@@ -113,10 +113,8 @@ dist
 # Docusaurus cache and generated files
 .docusaurus
 
-<<<<<<< HEAD
 # PyPI configuration file
 .pypirc
-=======
 # Serverless directories
 .serverless/
 
@@ -138,13 +136,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
->>>>>>> Cynthia
 
 node_modules
 package.json
 package-lock.json
-<<<<<<< HEAD
 .vscode
 
-=======
->>>>>>> Cynthia
+practice
+
+practice/
