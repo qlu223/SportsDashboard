@@ -1,0 +1,28 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: 10px;
+  /* max-width: 38rem;
+  padding: 2rem; */ 
+}
+.top_bar{
+  display: flex;
+  align-items: center;
+}
+
+table {
+  position:sticky;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 5px;
+  text-align: left;
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
