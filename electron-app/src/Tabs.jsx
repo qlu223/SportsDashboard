@@ -4,9 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import BasicSelect from './Select.jsx';
 import BasicMenu from './Menu.jsx';
-import StickyHeadTable from './StickyHeadTable.jsx';
 import TeamPage from './TeamPage.jsx';
 
 function TabPanel(props) {
