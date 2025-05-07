@@ -13,16 +13,18 @@ export default function TeamPage(){
             <Box sx={{display: 'flex',gap:'16px'}}>
                 <BasicSelect
                     label="View"
+                    id = "view-select"
                     options={[
-                        {value:10,label:'All Players'},
-                        {value:10,label:'Goalkeepers'},
+                        {value:1,label:'All Players'},
+                        {value:2,label:'Goalkeepers'},
                     ]}
                 />
                 <BasicSelect
                     label="Sorted By"
+                    id = "sort-by-select"
                     options={[
-                        {value:10,label:'All Players'},
-                        {value:10,label:'Goalkeepers'},
+                        {value:3,label:'Total Points'},
+                        {value:4,label:'Round Points'},
                     ]}
                 />
             </Box>
