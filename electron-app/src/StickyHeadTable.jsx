@@ -7,6 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
+import BootstrapAPI from "../data/bootstrap_api"
 
 const columns = [
   { id: "name", label: "Name", minWidth: 170 },
@@ -38,7 +39,7 @@ function createData(name, code, population, size) {
   const density = population / size;
   return { name, code, population, size, density };
 }
-
+/*
 const rows = [
   createData("India", "IN", 1324171354, 3287263),
   createData("China", "CN", 1403500365, 9596961),
@@ -56,6 +57,11 @@ const rows = [
   createData("Nigeria", "NG", 200962417, 923768),
   createData("Brazil", "BR", 210147125, 8515767),
 ];
+*/
+
+
+let t = new BootstrapAPI;
+let rows = t.getFilteredLeagueData();
 
 export default function StickyHeadTable() {
   const [page, setPage] = React.useState(0);

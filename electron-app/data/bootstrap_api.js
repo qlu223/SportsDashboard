@@ -1,4 +1,4 @@
-class BootstrapAPI {
+export default class BootstrapAPI {
     url = "https://fantasy.premierleague.com/api/bootstrap-static/";
 
     async fetchData() {
