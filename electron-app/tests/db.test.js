@@ -1,13 +1,19 @@
 // db.test.js
 const { describe, it, expect, vi } = require('vitest');
-const { getUserById } = require('./db');
+import { Pool } from 'pg';
 
-vi.mock('pg', () => {
-    return {
-        Pool: vi.fn(() => ({
-            query: vi.fn()
-        }))
-    };
+const path = require('path');
+require('dotenv').config({
+    override: true,
+    path: path.join(__dirname, 'development.env')
+});
+
+const pool = new Pool({
+    user: process.env.USER,
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD,
+    port: process.env.PORT
 });
 
 const { Pool } = require('pg');
