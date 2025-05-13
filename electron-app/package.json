@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "test": "vitest"
   },
   "keywords": [],
   "author": {
@@ -49,9 +50,12 @@
     "@toolpad/core": "^0.14.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^16.5.0",
     "electron-squirrel-startup": "^1.0.1",
     "lucide-react": "^0.507.0",
+    "pg": "^8.15.6",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sqlite3": "^5.1.7"
   }
 }
