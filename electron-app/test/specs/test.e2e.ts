@@ -29,11 +29,11 @@ describe('Tab Click Testing', () =>{
 })
 describe('Filter click testing', ()=>{
     it('should demonstrate a click on the view filter',async ()=>{
-        const myButton = await $('#demo-simple-select')
+        const myButton = await $('#view-select')
         await myButton.click()
     })
     it('should demonstrate a click on the sortedby filter',async ()=>{
-        const myButton = await $('#demo-simple-select')
+        const myButton = await $('#sort-by-select')
         await myButton.click()
     })
 })
