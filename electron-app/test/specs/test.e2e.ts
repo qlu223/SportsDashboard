@@ -4,10 +4,6 @@ describe('Electron Testing', () => {
     it('should print application title', async () => {
         console.log('Hello', await browser.getTitle(), 'application!')
     })
-    // it('should demonstrate a click', async () => {
-    //     const myButton = await $('#vertical-tab-9')
-    //     await myButton.click({ x: 0}) 
-    // })
 })
 describe('Tab Click Testing', () =>{
     it('should demonstrate a click on the overview page', async () => {
@@ -28,7 +24,17 @@ describe('Tab Click Testing', () =>{
     })
     it('should demonstrate a click on the predictions page', async () => {
         const myButton = await $('#vertical-tab-4')
-        await myButton.click({ x: 0}) 
+        await myButton.click() 
+    })
+})
+describe('Filter click testing', ()=>{
+    it('should demonstrate a click on the view filter',async ()=>{
+        const myButton = await $('#demo-simple-select')
+        await myButton.click()
+    })
+    it('should demonstrate a click on the sortedby filter',async ()=>{
+        const myButton = await $('#demo-simple-select')
+        await myButton.click()
     })
 })
 
