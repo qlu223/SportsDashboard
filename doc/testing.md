@@ -1,17 +1,30 @@
-1. We plan to use WebdriverIO (a test automation framework) to test:
+# Testing Plan
 
-- Button and click functionality
-- Functionality on different operating systems
-- API function calls
-- Forms
-- App health
+We are using WebdriverIO to test UI design and directory structure, as well as Vitest for API calls and data rendering functionality.
 
-2. We will manually test:
+# Running WebDriverIO Tests (in electron-app/test/specs)
 
-- UI design
-- Directory structure
+```
+cd electron-app/
+npx wdio run wdio.conf.js
+```
 
-Testing with Webdriver IO:
+# Running Vitest Tests (in electron-app/test)
 
-- cd into electron-app
-- in the commandline: npx wdio run wdio.conf.js
+```
+cd electron-app/
+npm test
+```
+
+# Tests We Have Implemented (or wish to Implement)
+
+1. Test call to external API to return expected data
+2. Test various button clicks performing as expected on our app
+
+# Tests We Plan on Implementing
+
+1. Test rendering of data on our app
+2. Test rendering of HTML/JS/CSS works as intended
+3. Test for no broken links in our app
+4. Test that visualizations are correctly filtered/sorted
+5. 
