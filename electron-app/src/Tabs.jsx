@@ -4,8 +4,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import BasicSelect from './Select.jsx';
 import BasicMenu from './Menu.jsx';
-import TeamPage from './TeamPage.jsx';
+import StickyHeadTable from './StickyHeadTable.jsx';
+import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,12 +61,30 @@ export default function VerticalTabs() {
             aria-label="Vertical tabs example"
             sx={{ borderRight: 1, borderColor: 'divider' }}
         >
-            <Tab label="Overview" {...a11yProps(0)} />
-            <Tab label="Fixtures" {...a11yProps(1)} />
-            <Tab label="Players" {...a11yProps(2)} />
-            <Tab label="Teams" {...a11yProps(3)} />
-            <Tab label="Visualizations" {...a11yProps(4)} />
-            <Tab label="Predictions" {...a11yProps(5)} />
+            <Tab 
+              icon={<House size={18} style={{ marginRight: 8 }} />}
+              iconPosition="end"
+              label="Overview" {...a11yProps(0)} />
+            <Tab 
+              icon={<CalendarCheck size={18} style={{ marginRight: 8 }} />}
+              iconPosition="end"
+              label="Fixtures" {...a11yProps(1)} />
+            <Tab 
+              icon={<PersonStanding size={18} style={{ marginRight: 8 }} />}
+              iconPosition="end"
+              label="Players" {...a11yProps(2)} />
+            <Tab 
+              icon={<Shirt size={18} style={{ marginRight: 8 }} />}
+              iconPosition="end"
+              label="Teams" {...a11yProps(3)} />
+            <Tab 
+              icon={<ChartNetwork size={18} style={{ marginRight: 8 }} />}
+              iconPosition="end"
+              label="Visualizations" {...a11yProps(4)} />
+            <Tab 
+              icon={<ChartNoAxesCombined size={18} style={{ marginRight: 8 }} />}
+              iconPosition="end"
+              label="Predictions" {...a11yProps(5)} />
         </Tabs>
         <TabPanel value={value} index={0}>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
@@ -82,9 +102,33 @@ export default function VerticalTabs() {
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
                 <BasicMenu />
             </Box>
+            PLayers
         </TabPanel>
         <TabPanel value={value} index={3}>
-            <TeamPage />
+            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
+                <BasicMenu />
+            </Box>
+            <Box sx={{display: 'flex',gap:'16px'}}>
+                <BasicSelect
+                    label="View"
+                    options={[
+                        {value:10,label:'All Players'},
+                        {value:10,label:'Goalkeepers'},
+                    ]}
+                />
+                <BasicSelect
+                    label="Sorted By"
+                    options={[
+                        {value:10,label:'All Players'},
+                        {value:10,label:'Goalkeepers'},
+                    ]}
+                />
+            </Box>
+                <h1>League Team Table</h1>
+            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
+                <StickyHeadTable />
+
+            </Box >
         </TabPanel>
         <TabPanel value={value} index={4}>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
