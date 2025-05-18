@@ -1,5 +1,5 @@
 
-class FixturesAPI{
+export default class FixturesAPI{
     url = "https://fantasy.premierleague.com/api/fixtures/";
 
     async fetchData() {
