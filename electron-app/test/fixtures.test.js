@@ -5,7 +5,7 @@ import FixturesAPI from '../data/fixtures.js';
 describe('FixturesAPI', () => {
     it('returns fixture object', async () => {
         let t = new FixturesAPI;
-        let fixtures = await t.getFixturesData;
+        let fixtures = await t.getFixturesData();
 
         expect(fixtures.length).toBe(380);
     });
