@@ -28,9 +28,6 @@ export default function BasicSelect({label, options, value}) {
               {option.label}
             </MenuItem>
           ))}
-          <MenuItem value={10}>Total Points</MenuItem>
-          <MenuItem value={20}>Round Points</MenuItem>
-          <MenuItem value={30}>Price</MenuItem>
         </Select>
       </FormControl>
     </Box>
