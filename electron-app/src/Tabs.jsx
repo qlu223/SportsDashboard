@@ -6,8 +6,13 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import BasicSelect from './Select.jsx';
 import BasicMenu from './Menu.jsx';
+<<<<<<< HEAD
 import StickyHeadTable from './StickyHeadTable.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
+=======
+import TeamsTable from './TeamsTable.jsx';
+import PlayerPage from './PlayerPage.jsx';
+>>>>>>> cynth
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -96,12 +101,14 @@ export default function VerticalTabs() {
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
                 <BasicMenu />
             </Box>
+            <PlayerPage />
             Fixturessss
         </TabPanel>
         <TabPanel value={value} index={2}>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
                 <BasicMenu />
             </Box>
+<<<<<<< HEAD
             PLayers
         </TabPanel>
         <TabPanel value={value} index={3}>
@@ -125,9 +132,10 @@ export default function VerticalTabs() {
                 />
             </Box>
                 <h1>League Team Table</h1>
+=======
+>>>>>>> cynth
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <StickyHeadTable />
-
+              <TeamsTable />
             </Box >
         </TabPanel>
         <TabPanel value={value} index={4}>
