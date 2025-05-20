@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import BasicSelect from './Select.jsx';
 import BasicMenu from './Menu.jsx';
-import StickyHeadTable from './StickyHeadTable.jsx';
+import TeamsTable from './TeamsTable.jsx';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -98,10 +98,8 @@ export default function VerticalTabs() {
                     ]}
                 />
             </Box>
-                <h1>League Team Table</h1>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <StickyHeadTable />
-
+              <TeamsTable />
             </Box >
         </TabPanel>
         <TabPanel value={value} index={3}>
