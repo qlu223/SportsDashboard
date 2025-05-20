@@ -1,15 +1,14 @@
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import './index.css';
-import VerticalTabs from './Tabs.jsx';
+
 
 window.onload = async function () {
   try {
-    const data = await window.fplAPI.getData();
+    const data = await window.fplAPI.fetchData();
 
-    const players = data.elements;
-    const teams = data.teams;
-    const positions = data.element_types;
+    console.log(data)
+
+    const players = await data.elements;
+    const teams = await data.teams;
+    const positions = await data.element_types;
 
     const container = document.getElementById('table-container');
 
@@ -57,14 +56,3 @@ window.onload = async function () {
     document.getElementById('table-container').textContent = "Failed to load data.";
   }
 };
-
-function App(){
-    return (
-        <div>
-            <VerticalTabs />
-        </div>
-    );
-}
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<App />);
