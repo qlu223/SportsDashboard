@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import BasicSelect from './Select.jsx';
 import BasicMenu from './Menu.jsx';
-import StickyHeadTable from './StickyHeadTable.jsx';
+import VisualsPage from './VisualsPage.jsx'
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 
 function TabPanel(props) {
@@ -126,7 +126,6 @@ export default function VerticalTabs() {
             </Box>
                 <h1>League Team Table</h1>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <StickyHeadTable />
 
             </Box >
         </TabPanel>
@@ -135,6 +134,7 @@ export default function VerticalTabs() {
                 <BasicMenu />
             </Box>
             Visualizations
+            <VisualsPage />
         </TabPanel>
         <TabPanel value={value} index={5}>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
