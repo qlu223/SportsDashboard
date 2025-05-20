@@ -9,19 +9,11 @@ export default function PlayerPage(){
         <div>
             <Box sx={{display: 'flex',gap:'16px'}}>
                 <BasicSelect
-                    label="View"
-                    id = "view-select"
-                    options={[
-                        {value:1,label:'All Players'},
-                        {value:2,label:'Goalkeepers'},
-                    ]}
-                />
-                <BasicSelect
                     label="Sorted By"
                     id = "sort-by-select"
                     options={[
-                        {value:3,label:'Total Points'},
-                        {value:4,label:'Round Points'},
+                        {value:'Total Points',label:'Total Points'},
+                        {value:'Round Points',label:'Round Points'},
                     ]}
                 />
             </Box>
