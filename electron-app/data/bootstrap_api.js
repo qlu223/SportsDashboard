@@ -37,6 +37,9 @@ export default class BootstrapAPI {
         //console.log(data['elements'][0])
         return data['elements'];
     }
+
+
 }
 
+module.exports = BootstrapAPI;
 
