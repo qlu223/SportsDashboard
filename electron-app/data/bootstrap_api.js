@@ -28,9 +28,8 @@ class BootstrapAPI {
         return data['elements'];
     }
 
-    
+
 }
 
-let t = new BootstrapAPI;
-t.getPlayerData()
+module.exports = BootstrapAPI;
 
