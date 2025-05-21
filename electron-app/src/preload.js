@@ -3,5 +3,7 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('fplAPI', {
-    getData: () => ipcRenderer.invoke('get-fpl-data'),
+    getLeagueData: () => ipcRenderer.invoke('get-league-data'),
+    getPlayerData: () => ipcRenderer.invoke('get-player-data'),
+    fetchData: () => ipcRenderer.invoke('get-data'),
 });

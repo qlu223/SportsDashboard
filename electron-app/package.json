@@ -48,10 +48,15 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@toolpad/core": "^0.14.0",
 =======
     "axios": "^1.9.0",
 >>>>>>> cynth
+=======
+    "axios": "^1.9.0",
+    "@toolpad/core": "^0.14.0",
+>>>>>>> 0bc1c4752fc0b9d3b4eadc1f9d694f7929856444
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^16.5.0",
