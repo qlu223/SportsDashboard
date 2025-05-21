@@ -13,6 +13,7 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+// Create window to run app in
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
@@ -40,26 +41,32 @@ app.whenReady().then(() => {
   });
 });
 
+// Close window
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
   }
 });
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
+// Handle league data call in renderer.js
 
 ipcMain.handle("get-league-data", async () => {
   return bootstrap_api.getLeagueData();
 });
 
+// Handle get data call in renderer.js
+
 ipcMain.handle("get-data", async () => {
   return bootstrap_api.fetchData();
 });
 
+// Handle player data call in renderer.js
+
 ipcMain.handle("get-player-data", async () => {
   return bootstrap_api.getPlayerData();
 });
+
+// Handle fixtures data call in renderer.js
 
 ipcMain.handle("get-fixtures-data", async () => {
   return fixture_api.getFilteredFixturesData();
