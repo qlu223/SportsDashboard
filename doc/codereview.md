@@ -1,6 +1,6 @@
 # Description:
 
-This desktop app is a customizable dashboard for soccer-related team and player statistics that will update during the season. We hope to
+This desktop app is a customizable dashboard for soccer-related team and player statistics that will update during the season.
 
 # Status
 
