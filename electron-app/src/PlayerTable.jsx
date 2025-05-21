@@ -3,16 +3,16 @@ import React, { useEffect, useState } from 'react';
 export default function PlayerTable() {
   const [players, setPlayers] = useState([]);
   const [teams, setTeams] = useState([]);
-  const [positions, setPositions] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await window.fplAPI.fetchData();
-        setPlayers(data.elements);
-        setTeams(data.teams);
-        setPositions(data.element_types);
+        const data = await window.fplAPI.getPlayerData();
+        const teamData = await window.fplAPI.getLeagueData();
+        console.log("Fetched data:", data);
+        setTeams(teamData);
+        setPlayers(data);
       } catch (err) {
         console.error("Error fetching FPL data:", err);
       } finally {
@@ -33,25 +33,21 @@ export default function PlayerTable() {
           <tr>
             <th>Name</th>
             <th>Team</th>
-            <th>Position</th>
-            <th>Price (M)</th>
-            <th>Points</th>
+            <th>Assists</th>
+            <th>Goals</th>
+            <th>Cost</th>
           </tr>
         </thead>
         <tbody>
-          {players.map((player) => {
-            const teamName = teams[player.team - 1]?.name || 'Unknown Team';
-            const posName = positions[player.element_type - 1]?.singular_name_short || 'Unknown Position';
-            return (
-              <tr key={player.id}>
-                <td>{`${player.first_name} ${player.second_name}`}</td>
-                <td>{teamName}</td>
-                <td>{posName}</td>
-                <td>{(player.now_cost / 10).toFixed(1)}</td>
-                <td>{player.total_points}</td>
-              </tr>
-            );
-          })}
+          {players.map((player) => (
+            <tr key={player.id}>
+              <td>{player.web_name}</td>
+              <td>{teams.find(team => team.id === player.team)?.name || 'Unknown'}</td>
+              <td>{player.assists}</td>
+              <td>{player.goals_scored}</td>
+              <td>{(player.now_cost / 10).toFixed(1)}M</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
