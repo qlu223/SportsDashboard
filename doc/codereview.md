@@ -1,6 +1,10 @@
 # Description:
 
-We plan
+We plan for our software to:
+
+1. Have a customizable dashboard of soccer-related player statistics that update during the season
+2. Have a customizable dashboard of soccer-related team statistics that update during the season
+3. Have a dashboard for future score predictions
 
 # Status
 
@@ -13,12 +17,14 @@ We plan
 
 ## In progress:
 
-- filtering and sorting by certain categories
-- visualization page
-- predictions(if we have time)
+- Filtering and sorting dashboard by certain categories
+- Visualizations page
+- Predictions page (if we have time)
 
 # How to run:
 
 see running.md
 
 # Questions:
+
+General questions about incorporating React into the project
