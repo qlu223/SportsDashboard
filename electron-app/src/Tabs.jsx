@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import PlayerPage from './PlayerPage.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 import TeamPage from './TeamPage.jsx';
+import FixturePage from './FixturePage.jsx';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,6 +90,7 @@ export default function VerticalTabs() {
             Overview
         </TabPanel>
         <TabPanel value={value} index={1}>
+            <FixturePage />
             Fixturessss
         </TabPanel>
         <TabPanel value={value} index={2}>
