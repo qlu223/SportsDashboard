@@ -8,7 +8,6 @@ export default function TeamTable() {
     async function fetchData() {
       try {
         const data = await window.fplAPI.getLeagueData();
-        console.log("Fetched data:", data);
         setTeams(data);
       } catch (err) {
         console.error("Error fetching FPL data:", err);
