@@ -6,13 +6,10 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import BasicSelect from './Select.jsx';
 import BasicMenu from './Menu.jsx';
-<<<<<<< HEAD
-import StickyHeadTable from './StickyHeadTable.jsx';
-import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
-=======
 import TeamsTable from './TeamsTable.jsx';
 import PlayerPage from './PlayerPage.jsx';
->>>>>>> cynth
+import StickyHeadTable from './StickyHeadTable.jsx';
+import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -108,32 +105,12 @@ export default function VerticalTabs() {
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
                 <BasicMenu />
             </Box>
-<<<<<<< HEAD
             PLayers
         </TabPanel>
         <TabPanel value={value} index={3}>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
                 <BasicMenu />
             </Box>
-            <Box sx={{display: 'flex',gap:'16px'}}>
-                <BasicSelect
-                    label="View"
-                    options={[
-                        {value:10,label:'All Players'},
-                        {value:10,label:'Goalkeepers'},
-                    ]}
-                />
-                <BasicSelect
-                    label="Sorted By"
-                    options={[
-                        {value:10,label:'All Players'},
-                        {value:10,label:'Goalkeepers'},
-                    ]}
-                />
-            </Box>
-                <h1>League Team Table</h1>
-=======
->>>>>>> cynth
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
               <TeamsTable />
             </Box >
