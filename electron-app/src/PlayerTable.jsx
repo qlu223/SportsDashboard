@@ -9,7 +9,7 @@ export default function PlayerTable() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await window.fplAPI.getData();
+        const data = await window.fplAPI.fetchData();
         setPlayers(data.elements);
         setTeams(data.teams);
         setPositions(data.element_types);
