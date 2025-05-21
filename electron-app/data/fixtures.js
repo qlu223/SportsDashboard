@@ -1,6 +1,13 @@
+/**
+ * Class for interacting with public Premier League fixtures API
+ */
 class FixturesAPI {
   url = "https://fantasy.premierleague.com/api/fixtures/";
 
+  /**
+   * Fetches JSON data from API
+   * @returns JS object with fixture data
+   */
   async fetchData() {
     try {
       let response = await fetch(this.url);
@@ -16,11 +23,23 @@ class FixturesAPI {
       console.error("Error fetching data:", error);
     }
   }
+
+  /**
+   * Extracts fixture data from API
+   * @returns Array of dictionaries, with each dictionary
+   * representing a fixture
+   */
   async getFixturesData() {
     let data = await this.fetchData();
-    //console.log(data[0])
+
     return data;
   }
+
+  /**
+   * Extracts fixture data to be presented in app
+   * @returns Array of dictionaries, with each dictionary
+   * representing a fixture
+   */
   async getFilteredFixturesData() {
     let data = await this.getFixturesData();
 
@@ -39,10 +58,9 @@ class FixturesAPI {
 
       table.push(new_row);
     }
-    //console.log(table)
+
     return table;
   }
 }
 module.exports = FixturesAPI;
-// let t = new FixturesAPI();
-// t.getFilteredFixturesData();
+
