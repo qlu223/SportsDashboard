@@ -4,11 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import BasicSelect from './Select.jsx';
-import BasicMenu from './Menu.jsx';
 import TeamsTable from './TeamsTable.jsx';
 import PlayerPage from './PlayerPage.jsx';
-import StickyHeadTable from './StickyHeadTable.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 
 function TabPanel(props) {
@@ -89,42 +86,22 @@ export default function VerticalTabs() {
               label="Predictions" {...a11yProps(5)} />
         </Tabs>
         <TabPanel value={value} index={0}>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <BasicMenu />
-            </Box>
             Overview
         </TabPanel>
         <TabPanel value={value} index={1}>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <BasicMenu />
-            </Box>
-            <PlayerPage />
             Fixturessss
         </TabPanel>
         <TabPanel value={value} index={2}>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <BasicMenu />
-            </Box>
+            <PlayerPage />
             PLayers
         </TabPanel>
         <TabPanel value={value} index={3}>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <BasicMenu />
-            </Box>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-              <TeamsTable />
-            </Box >
+          teams
         </TabPanel>
         <TabPanel value={value} index={4}>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <BasicMenu />
-            </Box>
             Visualizations
         </TabPanel>
         <TabPanel value={value} index={5}>
-            <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                <BasicMenu />
-            </Box>
             Predictions
       </TabPanel>
     </Box>

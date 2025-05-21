@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export default function TeamsTable() {
+export default function PlayerTable() {
   const [players, setPlayers] = useState([]);
   const [teams, setTeams] = useState([]);
   const [positions, setPositions] = useState([]);
@@ -27,7 +27,7 @@ export default function TeamsTable() {
 
   return (
     <div>
-      <h1>League Team Table</h1>
+      <h1>Player Table</h1>
       <table>
         <thead>
           <tr>

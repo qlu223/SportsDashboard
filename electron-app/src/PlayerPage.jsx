@@ -1,7 +1,7 @@
 import * as React from "react";
 import BasicSelect from "./Select.jsx";
 import Box from '@mui/material/Box';
-import TeamsTable from "./TeamsTable.jsx";
+import PlayerTable from "./TeamsTable.jsx";
 
 export default function PlayerPage(){
     return (
@@ -17,7 +17,7 @@ export default function PlayerPage(){
                 />
             </Box>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-                    <TeamsTable />
+                    <PlayerTable />
             </Box >
         </div>
     )
