@@ -1,7 +1,6 @@
 import * as React from "react";
 import BasicSelect from "./Select.jsx";
 import Box from '@mui/material/Box';
-import BasicMenu from "./Menu.jsx";
 import TeamsTable from "./TeamsTable.jsx";
 
 export default function PlayerPage(){

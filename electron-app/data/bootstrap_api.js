@@ -1,9 +1,6 @@
 class BootstrapAPI {
   url = "https://fantasy.premierleague.com/api/bootstrap-static/";
-  /**
-   * Retrieves data from bootstrap-static URL
-   * @returns A JSON response
-   */
+
   async fetchData() {
     try {
       let response = await fetch(this.url);
@@ -19,22 +16,15 @@ class BootstrapAPI {
       console.error("Error fetching data:", error);
     }
   }
-  /**
-   * Retrieves team data from API
-   * @returns an array of dictionaries, each dictionary referring to a particular team
-   */
   async getLeagueData() {
     let data = await this.fetchData();
     //console.log(data['teams'])
     return data["teams"];
   }
-  /**
-   * Retrieves player data from API
-   * @returns an array of dictionaries, each dictionary referring to a particular player
-   */
+
   async getPlayerData() {
     let data = await this.fetchData();
-    //console.log(data['elements'][0])
+    //console.log(data['elements'])
     return data["elements"];
   }
 }
