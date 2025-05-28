@@ -91,7 +91,6 @@ export default function VerticalTabs() {
         </TabPanel>
         <TabPanel value={value} index={1}>
             <FixturePage />
-            Fixturessss
         </TabPanel>
         <TabPanel value={value} index={2}>
             <PlayerPage />

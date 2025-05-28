@@ -10,6 +10,7 @@ export default function PlayerTable() {
       try {
         const data = await window.fplAPI.getPlayerData();
         const teamData = await window.fplAPI.getLeagueData();
+        console.log(data)
         setTeams(teamData);
         setPlayers(data);
       } catch (err) {
@@ -35,6 +36,7 @@ export default function PlayerTable() {
             <th>Assists</th>
             <th>Goals</th>
             <th>Cost</th>
+            <th>Points</th>
           </tr>
         </thead>
         <tbody>
@@ -45,6 +47,7 @@ export default function PlayerTable() {
               <td>{player.assists}</td>
               <td>{player.goals_scored}</td>
               <td>{(player.now_cost / 10).toFixed(1)}M</td>
+              <td>{player.total_points}</td>
             </tr>
           ))}
         </tbody>
