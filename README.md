@@ -17,7 +17,8 @@
 
 ## Existing Features:
 
-- Live datasets
+- Datasets reflecting up-to-date player, team, and fixture statistics
+- Realtime updates as sports events occur
 
 ## Todo list:
 
