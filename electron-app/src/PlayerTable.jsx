@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 export default function PlayerTable() {
   const [players, setPlayers] = useState([]);
   const [teams, setTeams] = useState([]);
@@ -31,7 +32,7 @@ export default function PlayerTable() {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th onClick = {}>Name</th>
             <th>Team</th>
             <th>Assists</th>
             <th>Goals</th>
