@@ -32,9 +32,9 @@ export default function FixtureTable (){
           <table>
             <thead>
               <tr>
-                <th>Home Team</th>
-                <th>Away Team</th>
-                <th>Kickoff Time</th>
+                <th class ="teamName">Home Team</th>
+                <th class ="teamName">Away Team</th>
+                <th class ="kickTime">Kickoff Time</th>
                 <th>Home Score</th>
                 <th>Away Score</th>
               </tr>

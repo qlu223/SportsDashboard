@@ -26,3 +26,12 @@ table, th, td {
   transition: margin-left .5s;
   padding: 20px;
 }
+th{
+  width:100px;
+}
+th.kickTime{
+  width: 200px;
+}
+th.teamName{
+  width: 125px;
+}
