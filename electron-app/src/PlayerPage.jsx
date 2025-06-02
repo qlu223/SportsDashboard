@@ -7,14 +7,14 @@ export default function PlayerPage(){
     return (
         <div>
             <Box sx={{display: 'flex',gap:'16px'}}>
-                <BasicSelect
+                {/* <BasicSelect
                     label="Sorted By"
                     id = "sort-by-select"
                     options={[
                         {value:'Total Points',label:'Total Points'},
                         {value:'Round Points',label:'Round Points'},
                     ]}
-                />
+                /> */}
             </Box>
             <Box sx={{display:'flex',justifyContent:'flex-end'}}>
                     <PlayerTable />

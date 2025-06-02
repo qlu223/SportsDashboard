@@ -87,7 +87,8 @@ export default function VerticalTabs() {
               label="Predictions" {...a11yProps(5)} />
         </Tabs>
         <TabPanel value={value} index={0}>
-            Overview
+            Overview:
+            Most common data visualizations used by Fantasy players (top scorers, next week's fixtures, etc.)
         </TabPanel>
         <TabPanel value={value} index={1}>
             <FixturePage />
@@ -99,10 +100,12 @@ export default function VerticalTabs() {
             <TeamPage />
         </TabPanel>
         <TabPanel value={value} index={4}>
-            Visualizations
+            Visualizations:
+            Data visualizations chosen by the user
         </TabPanel>
         <TabPanel value={value} index={5}>
-            Predictions
+            Predictions:
+            Predictions of match scorers, highest scoring players, etc.
       </TabPanel>
     </Box>
   );
