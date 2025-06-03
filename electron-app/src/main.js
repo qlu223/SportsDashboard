@@ -69,5 +69,5 @@ ipcMain.handle("get-player-data", async () => {
 // Handle fixtures data call in renderer.js
 
 ipcMain.handle("get-fixtures-data", async () => {
-  return fixture_api.getFilteredFixturesData();
+  return fixture_api.getFixturesData();
 });

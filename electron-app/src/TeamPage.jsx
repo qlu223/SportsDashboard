@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from '@mui/material/Box';
-import TeamTable from './TeamTable.jsx'
+import TeamTable from './TeamTable2.jsx'
 
 export default function TeamPage(){
     return (

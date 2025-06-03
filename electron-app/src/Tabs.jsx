@@ -8,6 +8,7 @@ import PlayerPage from './PlayerPage.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 import TeamPage from './TeamPage.jsx';
 import FixturePage from './FixturePage.jsx';
+import DataTable from './PlayerTable3.jsx';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -91,10 +92,9 @@ export default function VerticalTabs() {
         </TabPanel>
         <TabPanel value={value} index={1}>
             <FixturePage />
-            Fixturessss
         </TabPanel>
         <TabPanel value={value} index={2}>
-            <PlayerPage />
+            <DataTable />
         </TabPanel>
         <TabPanel value={value} index={3}>
             <TeamPage />
