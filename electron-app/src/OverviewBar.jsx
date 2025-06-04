@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
-
+import {Box, Typography} from '@mui/material';
 
 const chartSetting = {
 
@@ -46,12 +46,22 @@ export default function BarsDataset() {
   }));
  
   return (
-    <BarChart
-      dataset={chartData}
-      yAxis={chartSetting.yAxis}
-      series={[{ dataKey: 'total_points', label: 'Total points' }]}
-      layout="horizontal"
-      {...chartSetting}
-    />
+    <Box
+      sx={{
+        backgroundColor: '#FFEBC2',
+        padding: '10px',
+        borderRadius: '10px',
+      }}>
+      <Typography variant="h6" gutterBottom align= "center">
+        Top 5 Players by Total Points
+      </Typography>
+      <BarChart
+        dataset={chartData}
+        yAxis={chartSetting.yAxis}
+        series={[{ dataKey: 'total_points', label: 'Total points' }]}
+        layout="horizontal"
+        {...chartSetting}
+      />
+    </Box>
   );
 }
