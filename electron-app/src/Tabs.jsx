@@ -8,7 +8,7 @@ import PlayerPage from './PlayerPage.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 import TeamPage from './TeamPage.jsx';
 import FixturePage from './FixturePage.jsx';
-import DataTable from './PlayerTable3.jsx';
+import OverviewPage from './OverviewPage.jsx';import DataTable from './PlayerTable3.jsx';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,20 +52,65 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, display: 'flex', height: '100vh' }}
+      sx={{ 
+        flexGrow: 1,
+        display: 'flex', 
+        height: '100vh',
+       }}
     >
+      <Box
+        sx={{
+          backgroundColor: '#141B41',
+          borderRadius: 6,
+        }}>
+       <Box
+          sx={{
+            paddingTop: '16px',
+            justifyContent: 'center',
+            display: 'flex',
+          }}>
+        <img src="./images/placeholder.png" alt="Logo" style={{ width: '40px' }} />
+        </Box>
         <Tabs
             orientation="vertical"
             variant="scrollable"
             value={value}
             onChange={handleChange}
             aria-label="Vertical tabs example"
-            sx={{ borderRight: 1, borderColor: 'divider' }}
+            sx={{ 
+              borderRight: 1, 
+              borderColor: 'divider',
+              position: 'sticky',
+              '& .MuiTab-root': {            
+                '&:hover': {
+                  backgroundColor: '#6F9CEB', 
+                  color: '#141B41'
+                },
+                '&.Mui-selected': {
+                  backgroundColor: '#6F9CEB',
+                  color: '#141B41', 
+                },
+                color: '#98B9F2',
+                fontWeight: 'bold',
+              },   
+               
+            }}
+            TabIndicatorProps={{
+              sx: {
+                backgroundColor: '#FFAA00', 
+                width: '6px',                
+                left: 0,                 
+                borderRadius: '4px',
+                height: '3px'
+              }
+            }}
         >
+
             <Tab 
-              icon={<House size={18} style={{ marginRight: 8 }} />}
+              icon={<House size={18} style={{ marginRight: 8}} />}
               iconPosition="end"
               label="Overview" {...a11yProps(0)} />
+              
             <Tab 
               icon={<CalendarCheck size={18} style={{ marginRight: 8 }} />}
               iconPosition="end"
@@ -79,8 +124,20 @@ export default function VerticalTabs() {
               iconPosition="end"
               label="Teams" {...a11yProps(3)} />
         </Tabs>
+      </Box>
+        
+        <Box 
+          sx = {{
+            flexGrow: 1,
+            overflowY: 'auto',    
+            height: '100vh',
+            
+           }}>
+
         <TabPanel value={value} index={0}>
-            Overview
+            <h2>Fantasy Overview</h2>
+            <OverviewPage />
+
         </TabPanel>
         <TabPanel value={value} index={1}>
             <FixturePage />

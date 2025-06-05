@@ -10,6 +10,7 @@ export default function PlayerTable() {
       try {
         const data = await window.fplAPI.getPlayerData();
         const teamData = await window.fplAPI.getLeagueData();
+        console.log(data);
         setTeams(teamData);
         setPlayers(data);
       } catch (err) {
