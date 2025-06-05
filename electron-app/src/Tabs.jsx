@@ -78,14 +78,6 @@ export default function VerticalTabs() {
               icon={<Shirt size={18} style={{ marginRight: 8 }} />}
               iconPosition="end"
               label="Teams" {...a11yProps(3)} />
-            <Tab 
-              icon={<ChartNetwork size={18} style={{ marginRight: 8 }} />}
-              iconPosition="end"
-              label="Visualizations" {...a11yProps(4)} />
-            <Tab 
-              icon={<ChartNoAxesCombined size={18} style={{ marginRight: 8 }} />}
-              iconPosition="end"
-              label="Predictions" {...a11yProps(5)} />
         </Tabs>
         <TabPanel value={value} index={0}>
             Overview
