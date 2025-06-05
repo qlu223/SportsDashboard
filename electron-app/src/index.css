@@ -1,9 +1,16 @@
+:root{
+  --dark: #141B41; /* var(--dark) */
+  --light: #CFE0F2; /* var(--light) */
+  --hover: #6F9CEB; /* var(--pink) */
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   margin: 10px;
   /* max-width: 38rem;
   padding: 2rem; */ 
+  background-color: var(--light);
 }
 .top_bar{
   display: flex;
@@ -25,4 +32,8 @@ table, th, td {
 #main {
   transition: margin-left .5s;
   padding: 20px;
+}
+#vertical-tab:hover{
+  color: var(--hover);
+  text-decoration: underline;
 }

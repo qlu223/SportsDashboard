@@ -10,6 +10,7 @@ export default function FixtureTable (){
           try {
             const data = await window.fplAPI.getFilteredFixturesData();
             const teams = await window.fplAPI.getLeagueData();
+            console.log(data);
             setFixtures(data);
             setTeams(teams);
           } catch (err) {
