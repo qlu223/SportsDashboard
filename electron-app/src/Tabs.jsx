@@ -148,6 +148,7 @@ export default function VerticalTabs() {
         <TabPanel value={value} index={3}>
             <TeamPage />
         </TabPanel>
+      </Box>
     </Box>
   );
 }
