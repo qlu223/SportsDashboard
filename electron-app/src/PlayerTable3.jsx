@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 const columns = [
   { field: 'name', headerName: 'Name', minWidth: 170 },
   { field: 'team', headerName: 'Team', minWidth: 100 },
+  { field: 'position', headerName: 'Position', minWidth: 100 },
   {
     field: 'goals',
     headerName: 'Goals',
@@ -54,13 +55,23 @@ async function createData(data) {
 
     let teams = await createTeamDictionary();
 
+    let positions = {
+      1: "GK",
+      2:"DEF",
+      3:"MID",
+      4:"FWD"
+    }
+
     let table = [];
+
+    console.log(data)
 
     for (let i in data) {
       let row = data[i];
       let new_row = {
         id: i,
         name: row.web_name,
+        position: positions[row.element_type],
         team: teams[row.team],
         goals: row.goals_scored,
         assists: row.assists,

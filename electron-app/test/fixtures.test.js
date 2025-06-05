@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import FixturesAPI from '../data/fixtures.js';
 
 describe('FixturesAPI', () => {
-    it('returns fixture object', async () => {
+    it('returns object with length 380', async () => {
         let t = new FixturesAPI;
         let fixtures = await t.getFixturesData();
 

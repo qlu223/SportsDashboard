@@ -99,12 +99,6 @@ export default function VerticalTabs() {
         <TabPanel value={value} index={3}>
             <TeamPage />
         </TabPanel>
-        <TabPanel value={value} index={4}>
-            Visualizations
-        </TabPanel>
-        <TabPanel value={value} index={5}>
-            Predictions
-      </TabPanel>
     </Box>
   );
 }
