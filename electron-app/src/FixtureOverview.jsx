@@ -41,7 +41,7 @@ export default function BasicList() {
         marginRight: '45px',
         width: '100%', 
         maxWidth: 360, 
-        bgcolor: '#FFEBC2' }}>
+        bgcolor: 'white' }}>
         
         <List>
             <ListItem disablePadding>

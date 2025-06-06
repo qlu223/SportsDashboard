@@ -48,7 +48,7 @@ export default function BarsDataset() {
   return (
     <Box
       sx={{
-        backgroundColor: '#FFEBC2',
+        backgroundColor: 'white',
         padding: '10px',
         borderRadius: '10px',
       }}>
