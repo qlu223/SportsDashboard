@@ -43,6 +43,9 @@ export default function BarsDataset() {
   const chartData = top5Players.map(p => ({
     web_name: p.web_name,
     total_points: p.total_points,
+    postion:p.element_type,
+    team: p.team,
+    price: p.now_cost /10,
   }));
  
   return (
@@ -59,6 +62,7 @@ export default function BarsDataset() {
         dataset={chartData}
         yAxis={chartSetting.yAxis}
         series={[{ dataKey: 'total_points', label: 'Total points' }]}
+        
         layout="horizontal"
         {...chartSetting}
       />

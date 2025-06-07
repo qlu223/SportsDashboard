@@ -7,11 +7,11 @@ import ScatterChart2 from "./ScatterPlot.jsx";
 export default function OverviewPage() {
   return (
     <div>
-      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+      <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
         <BasicList />
         <BarsDataset /> 
       </Box>
-      <Box>
+      <Box sx={{marginTop: "10px"}}>
         <ScatterChart2 />
       </Box>
     </div>

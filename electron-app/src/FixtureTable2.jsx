@@ -83,7 +83,6 @@ export default function FixtureTable() {
           sortModel: [{ field: 'gameweek', sort: 'desc' }],
         }, }}
         pageSizeOptions={[10, 20]}
-        checkboxSelection
         sx={{ border: 0 }}
       />
     </Paper>

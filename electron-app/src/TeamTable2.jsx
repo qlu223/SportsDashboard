@@ -74,7 +74,6 @@ export default function TeamTable() {
         }, 
       }}
         pageSizeOptions={[10, 20]}
-        checkboxSelection
         sx={{ border: 0 }}
       />
     </Paper>

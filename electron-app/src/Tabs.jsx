@@ -8,8 +8,7 @@ import PlayerPage from './PlayerPage.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 import TeamPage from './TeamPage.jsx';
 import FixturePage from './FixturePage.jsx';
-import OverviewPage from './OverviewPage.jsx';import DataTable from './PlayerTable3.jsx';
-
+import OverviewPage from './OverviewPage.jsx';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -69,7 +68,7 @@ export default function VerticalTabs() {
             justifyContent: 'center',
             display: 'flex',
           }}>
-        <img src="./images/placeholder.png" alt="Logo" style={{ width: '40px' }} />
+        <img src='/images/SoFIFA.png' alt="Logo" style={{ width: '40px' }} />
         </Box>
         <Tabs
             orientation="vertical"
@@ -143,7 +142,7 @@ export default function VerticalTabs() {
             <FixturePage />
         </TabPanel>
         <TabPanel value={value} index={2}>
-            <DataTable />
+            <PlayerPage />
         </TabPanel>
         <TabPanel value={value} index={3}>
             <TeamPage />

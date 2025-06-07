@@ -37,3 +37,6 @@ table, th, td {
   color: var(--hover);
   text-decoration: underline;
 }
+h5{
+  text-align: right;
+}
