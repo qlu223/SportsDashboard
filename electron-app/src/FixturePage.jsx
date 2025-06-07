@@ -1,6 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import FixtureTable from "./FixtureTable2.jsx";
+import FixtureTable from "./components/FixtureTable2.jsx";
 import {EllipsisVertical} from 'lucide-react';
 
 export default function FixturePage() {

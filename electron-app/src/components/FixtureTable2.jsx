@@ -4,7 +4,10 @@ import Paper from '@mui/material/Paper';
 
 const columns = [
   { field: 'gameweek', headerName: 'Gameweek', minWidth: 50 },
-  { field: 'time', headerName: 'Time', minWidth: 200 },
+  { 
+    field: 'time', headerName: 'Time', minWidth: 200
+  
+  },
   {
     field: 'home',
     headerName: 'Home Team',
