@@ -4,7 +4,18 @@ import {Box, Typography} from '@mui/material';
 
 const chartSetting = {
 
-  yAxis: [{ label: 'Players', width: 120, scaleType: 'band', dataKey: 'web_name', type: 'category' }],
+  yAxis: [
+    {
+      label: 'Players',
+      width: 120, 
+      scaleType: 'band', 
+      dataKey: 'web_name', 
+      type: 'category' }],
+  xAxis: [
+    {
+      label: 'Total points',
+    },
+  ],
   height: 300,
   width: 550,
 };
@@ -36,9 +47,9 @@ export default function BarsDataset() {
       !isNaN(p.total_points)
   );
   const top5Players = validPlayers
-    .slice() // create a shallow copy so you don't mutate original array
-    .sort((a, b) => b.total_points - a.total_points) // descending sort by total_points
-    .slice(0, 5); // take first 5 players
+    .slice() 
+    .sort((a, b) => b.total_points - a.total_points) 
+    .slice(0, 5);
 
   const chartData = top5Players.map(p => ({
     web_name: p.web_name,
@@ -61,9 +72,11 @@ export default function BarsDataset() {
       <BarChart
         dataset={chartData}
         yAxis={chartSetting.yAxis}
-        series={[{ dataKey: 'total_points', label: 'Total points' }]}
-        
+        series={[
+          { dataKey: 'total_points', label: 'Total points'}
+        ]}
         layout="horizontal"
+        grid={{ vertical: true }}
         {...chartSetting}
       />
     </Box>

@@ -7,7 +7,8 @@ export default function FixturePage() {
   return (
     <div>
       <h1>This season's matchups:</h1>
-      <h5>Sort and filter by  hovering and clicking on the <EllipsisVertical size={16}/></h5>
+      <h5>Sort and filter by  hovering and clicking on the vertical Ellipsis<EllipsisVertical size={16}/></h5> 
+      <h5>Change column width by dragging the header separator |</h5>
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <FixtureTable />
       </Box>

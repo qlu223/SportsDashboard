@@ -18,18 +18,7 @@ describe('Tab Click Testing', () =>{
         const myButton = await $('#vertical-tab-3')
         await myButton.click() 
     })
-    it('should demonstrate a click on the visualizations page', async () => {
-        const myButton = await $('#vertical-tab-4')
-        await myButton.click() 
-    })
-    it('should demonstrate a click on the predictions page', async () => {
-        const myButton = await $('#vertical-tab-5')
-        await myButton.click() 
-    })
 })
-// describe('Overview Page for Hover Testing', ()=>{
-//     before 
-// })
 // describe('Filter click testing', ()=>{
 //     it('should demonstrate a click on the teams page', async () => {
 //         const myButton = await $('#vertical-tab-3')

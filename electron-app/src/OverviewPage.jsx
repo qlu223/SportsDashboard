@@ -1,8 +1,8 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import BarsDataset from './OverviewBar.jsx';
-import BasicList from "./FixtureOverview.jsx";
-import ScatterChart2 from "./ScatterPlot.jsx";
+import BarsDataset from './components/OverviewBar.jsx';
+import BasicList from "./components/FixtureOverview.jsx";
+import ScatterChart2 from "./components/ScatterPlot.jsx";
 
 export default function OverviewPage() {
   return (

@@ -38,5 +38,8 @@ table, th, td {
   text-decoration: underline;
 }
 h5{
-  text-align: right;
+  text-align: center;
+}
+#underline{
+  text-decoration: underline;
 }

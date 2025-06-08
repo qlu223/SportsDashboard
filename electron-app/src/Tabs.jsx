@@ -67,8 +67,10 @@ export default function VerticalTabs() {
             paddingTop: '16px',
             justifyContent: 'center',
             display: 'flex',
+            color: 'white'
           }}>
-        <img src='/images/SoFIFA.png' alt="Logo" style={{ width: '40px' }} />
+        {/* <img src='/images/SoFIFA.png' alt="Logo" style={{ width: '40px' }} /> */}
+        <h1>Scrimmage</h1>
         </Box>
         <Tabs
             orientation="vertical"
