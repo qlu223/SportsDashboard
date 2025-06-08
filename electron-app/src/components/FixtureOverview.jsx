@@ -65,8 +65,8 @@ export default function BasicList() {
         p: 2,
       }}
     >
+        <h4><span id="underline">Recently Played Matches</span></h4>
         <Typography variant="h6" gutterBottom>
-            <h4><span id="underline">Recently Played </span></h4>
             Gameweek {latestGameweek}
         </Typography>
 
