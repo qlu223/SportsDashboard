@@ -136,7 +136,7 @@ export default function VerticalTabs() {
            }}>
 
         <TabPanel value={value} index={0}>
-            <h2>Fantasy Overview</h2>
+      
             <OverviewPage />
 
         </TabPanel>

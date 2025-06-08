@@ -7,6 +7,7 @@ import ScatterChart2 from "./components/ScatterPlot.jsx";
 export default function OverviewPage() {
   return (
     <div>
+      <h2>What's new?</h2>
       <Box sx={{ display: "flex", justifyContent: "flex-start" }}>
         <BasicList />
         <BarsDataset /> 
