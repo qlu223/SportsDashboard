@@ -5,7 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-
+//Reference: https://mui.com/material-ui/react-list/
 export default function BasicList() {
   const [fixtures, setFixtures] = useState([]);
   const [teams, setTeams] = useState([]);
@@ -48,7 +48,10 @@ export default function BasicList() {
   const recentWeekFixtures = fixturesWithDates.filter(
     f => f.event === latestGameweek
   );
-
+  /**
+    * Input: teamId(int)
+    * Returns: team name corresponding to the id (String)
+   */
   function getTeamName(teamId) {
     const team = teams.find(t => t.id === teamId);
     return team ? team.name : 'Unknown';
@@ -72,7 +75,7 @@ export default function BasicList() {
 
         <List
             sx={{
-                maxHeight: '250px', // adjust depending on row height
+                maxHeight: '250px', 
                 overflowY: 'auto',
             }}
             >
