@@ -9,6 +9,13 @@ cd electron-app/
 npx wdio run wdio.conf.js
 ```
 
+### when you make a change to the application:
+
+```
+npm run make
+npx wdio run wdio.conf.js
+```
+
 # Running Vitest Tests (in electron-app/test)
 
 ```
@@ -27,4 +34,4 @@ npm test
 2. Test rendering of HTML/JS/CSS works as intended
 3. Test for no broken links in our app
 4. Test that visualizations are correctly filtered/sorted
-5. 
+5.

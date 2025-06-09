@@ -1,4 +1,4 @@
-# Title: FPL Sports Dashboard
+# Scrimmage
 
 ## Description: A one-stop shop for all relevant Fantasy soccer statistics related to players, teams, and fixtures. 
 
@@ -21,7 +21,10 @@
 - Realtime updates as sports events occur
 - Data visualizations for commonly-used statistics
 
-## Todo list:
+## Did not complete:
 
+- Login functionality
+- A predictive model to estimate future fantasy sports points
 - Increased customization of visualizations
 - Detailed view of table elements upon clicking
+
