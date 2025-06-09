@@ -2,6 +2,7 @@
 // https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
 const { contextBridge, ipcRenderer } = require("electron");
 
+// Bridge exposing backend to frontend
 contextBridge.exposeInMainWorld("fplAPI", {
   getLeagueData: () => ipcRenderer.invoke("get-league-data"),
   getPlayerData: () => ipcRenderer.invoke("get-player-data"),
