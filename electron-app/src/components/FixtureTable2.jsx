@@ -42,7 +42,7 @@ const columns = [
     minWidth: 170,
     align: 'left',
     description: "The team playing away from home"
-  },
+  }
 ];
 
 async function createTeamDictionary() {
@@ -82,6 +82,7 @@ async function createData(data) {
 }
 
 let rows = await window.fplAPI.getFilteredFixturesData();
+
 rows = await createData(rows);
 
 const paginationModel = { page: 0, pageSize: 10 };

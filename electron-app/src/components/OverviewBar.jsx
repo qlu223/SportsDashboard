@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 import {Box, Typography} from '@mui/material';
+import { ChartContainer } from '@mui/x-charts/ChartContainer';
 //Reference: https://mui.com/x/react-charts/bars/
 const chartSetting = {
 
@@ -17,7 +18,6 @@ const chartSetting = {
     },
   ],
   height: 300,
-  width: 550,
 };
 export default function BarsDataset() {
   const [players, setPlayers] = useState([]);
@@ -63,6 +63,11 @@ export default function BarsDataset() {
         backgroundColor: 'white',
         padding: '10px',
         borderRadius: '10px',
+        width: {
+                xs: '100%',  // full width on mobile
+                sm: '75%',   // 75% width on tablets
+                md: '75%'    // 50% width on desktop
+                },
       }}>
       <Typography variant="h6" gutterBottom align= "center">
         Top 5 Players by Total Points
@@ -80,3 +85,16 @@ export default function BarsDataset() {
     </Box>
   );
 }
+
+/*
+<BarChart
+        dataset={chartData}
+        yAxis={chartSetting.yAxis}
+        series={[
+          { dataKey: 'total_points', label: 'Total points'}
+        ]}
+        layout="horizontal"
+        grid={{ vertical: true }}
+        {...chartSetting}
+      />
+*/

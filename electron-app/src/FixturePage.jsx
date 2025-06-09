@@ -6,10 +6,13 @@ import {EllipsisVertical} from 'lucide-react';
 export default function FixturePage() {
   return (
     <div>
-      <h1>This season's matchups:</h1>
-      <h5>Sort and filter by  hovering and clicking on the vertical Ellipsis<EllipsisVertical size={16}/></h5> 
-      <h5>Change column width by dragging the header separator |</h5>
-      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+      <h1>Premier League Matches</h1>
+      <p> 
+          Use this page to take a more in-depth look at the past results and future fixtures in the
+          Premier League. You can sort, filter, and manage columns by hovering over the column header and interacting 
+          with the <EllipsisVertical size={16}/>
+      </p>
+      <Box sx={{ display: "flex", justifyContent: "flex-end", width:1000 }}>
         <FixtureTable />
       </Box>
     </div>

@@ -10,7 +10,7 @@
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "test": "vitest"
+    "test": "vitest --silent=false"
   },
   "keywords": [],
   "author": {
@@ -46,8 +46,8 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^7.0.2",
-    "@mui/x-charts": "^8.5.0",
+    "@mui/material": "^7.1.1",
+    "@mui/x-charts": "^8.5.1",
     "@toolpad/core": "^0.14.0",
     "axios": "^1.9.0",
     "class-variance-authority": "^0.7.1",

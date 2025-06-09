@@ -1,6 +1,6 @@
 # Scrimmage
 
-## Description: A one-stop shop for all relevant Fantasy soccer statistics related to players, teams, and fixtures
+## Description: A one-stop shop for all relevant Fantasy soccer statistics related to players, teams, and fixtures. 
 
 ## Getting started:
 
@@ -17,14 +17,14 @@
 
 ## Existing Features:
 
-- Datasets reflecting up-to-date player, team, and fixture statistics
+- Datasets reflecting up-to-date player, team, and fixture statistics and high levels of customizations
 - Realtime updates as sports events occur
-- A script programmed to regularly pull data from the necessary APIs to update our site
-- Increased customization of datasets (filtering, sorting, visualizations)
-- More text describing how to interact with each tab
-- Overview with interactable graphs and widgets related to recent matches and other interesting statistics
+- Data visualizations for commonly-used statistics
 
 ## Did not complete:
 
 - Login functionality
 - A predictive model to estimate future fantasy sports points
+- Increased customization of visualizations
+- Detailed view of table elements upon clicking
+

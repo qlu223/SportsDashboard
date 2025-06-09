@@ -137,6 +137,8 @@ export default function VerticalTabs() {
           }}>
 
         <TabPanel value={value} index={0}>
+            <h1 align="center">Welcome to Scrimmage!</h1>
+            <h3 align="center">The one-stop shop for all relevant Fantasy Premier League statistics!</h3>
             <OverviewPage />
         </TabPanel>
         <TabPanel value={value} index={1}>
