@@ -12,6 +12,7 @@ npx wdio run wdio.conf.js
 ### when you make a change to the application:
 
 ```
+cd electron-app/
 npm run make
 npx wdio run wdio.conf.js
 ```
@@ -23,15 +24,12 @@ cd electron-app/
 npm test
 ```
 
-# Tests We Have Implemented (or wish to Implement)
+# Tests We Have Implemented 
 
 1. Test call to external API to return expected data
 2. Test various button clicks performing as expected on our app
+3. Test rendering of data on our app
+4. Test for no broken links in our app
+5. Test that visualizations are correctly filtered/sorted
 
-# Tests We Plan on Implementing
 
-1. Test rendering of data on our app
-2. Test rendering of HTML/JS/CSS works as intended
-3. Test for no broken links in our app
-4. Test that visualizations are correctly filtered/sorted
-5.
