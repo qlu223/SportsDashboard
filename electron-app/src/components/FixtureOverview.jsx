@@ -62,13 +62,19 @@ export default function BasicList() {
       sx={{
         borderRadius: '10px',
         marginRight: '45px',
-        width: '100%',
+        width: {
+                xs: '100%',  // full width on mobile
+                sm: '75%',   // 75% width on tablets
+                md: '75%'    // 50% width on desktop
+                },
         maxWidth: 360,
         bgcolor: 'white',
         p: 2,
       }}
     >
-        <h4><span id="underline">Recently Played Matches</span></h4>
+        <Typography variant="h6" gutterBottom align= "center">
+            Recently Played Matches
+        </Typography>
         <Typography variant="h6" gutterBottom>
             Gameweek {latestGameweek}
         </Typography>

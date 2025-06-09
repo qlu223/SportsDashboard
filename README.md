@@ -1,6 +1,6 @@
 # Title: FPL Sports Dashboard
 
-## Description: A one-stop shop for all relevant Fantasy soccer statistics related to players, teams, and fixtures
+## Description: A one-stop shop for all relevant Fantasy soccer statistics related to players, teams, and fixtures. 
 
 ## Getting started:
 
@@ -17,11 +17,11 @@
 
 ## Existing Features:
 
-- Datasets reflecting up-to-date player, team, and fixture statistics
+- Datasets reflecting up-to-date player, team, and fixture statistics and high levels of customizations
 - Realtime updates as sports events occur
+- Data visualizations for commonly-used statistics
 
 ## Todo list:
 
-- Increased customization of datasets (filtering, sorting, visualizations)
-- More text describing how to interact with each tab
-- Detailed view of element in table upon clicking
+- Increased customization of visualizations
+- Detailed view of table elements upon clicking

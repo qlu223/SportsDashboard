@@ -40,7 +40,11 @@ export default function ScatterChart2() {
     return (
             <Box
                 sx={{
-                    width: 600,
+                    width: {
+                        xs: '100%',  // full width on mobile
+                        sm: '75%',   // 75% width on tablets
+                        md: '75%'    // 50% width on desktop
+                        },
                     backgroundColor: 'white',
                     padding: '10px',
                     borderRadius: '10px',
@@ -48,7 +52,7 @@ export default function ScatterChart2() {
             <Typography variant="h6" gutterBottom align= "center">
                 Form vs Total Points
             </Typography>
-            <ResponsiveContainer width="90%" height={400}>
+            <ResponsiveContainer width="90%" height={600}>
             <ScatterChart
             margin={{
                 top: 20,
