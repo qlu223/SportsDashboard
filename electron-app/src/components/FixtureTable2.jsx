@@ -1,33 +1,47 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
-
+//Reference: https://mui.com/x/react-data-grid/
 const columns = [
-  { field: 'gameweek', headerName: 'Gameweek', minWidth: 50 },
-  { field: 'time', headerName: 'Time', minWidth: 200 },
+  { field: 'gameweek', 
+    headerName: 'Gameweek', 
+    minWidth: 50,
+    description: "Week in the season when the match is scheduled"
+  },
+  
+  { 
+    field: 'time', 
+    headerName: 'Time', 
+    minWidth: 200,
+    description: "Kickoff time for the match in UTC (Coordinated Universal Time)"
+  },
   {
     field: 'home',
     headerName: 'Home Team',
     minWidth: 170,
     align: 'left',
+    description: "The team hosting the match"
   },
   {
     field: 'home_score',
     headerName: 'Home Score',
     minWidth: 50,
     align: 'center',
+    description: "Number of goals scored by the home team"
   },
   {
     field: 'away_score',
     headerName: 'Away Score',
     minWidth: 50,
     align: 'center',
+    description: "Number of goals scored by the away team"
   },
   {
     field: 'away',
     headerName: 'Away Team',
     minWidth: 170,
     align: 'left',
+    description: "The team playing away from home"
   },
 ];
 
@@ -83,7 +97,6 @@ export default function FixtureTable() {
           sortModel: [{ field: 'gameweek', sort: 'desc' }],
         }, }}
         pageSizeOptions={[10, 20]}
-        checkboxSelection
         sx={{ border: 0 }}
       />
     </Paper>

@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart } from '@mui/x-charts/BarChart';
 import {Box, Typography} from '@mui/material';
-
+//Reference: https://mui.com/x/react-charts/bars/
 const chartSetting = {
 
-  yAxis: [{ label: 'Players', width: 120, scaleType: 'band', dataKey: 'web_name', type: 'category' }],
+  yAxis: [
+    {
+      label: 'Players',
+      width: 120, 
+      scaleType: 'band', 
+      dataKey: 'web_name', 
+      type: 'category' }],
+  xAxis: [
+    {
+      label: 'Total points',
+    },
+  ],
   height: 300,
   width: 550,
 };
@@ -27,7 +38,7 @@ export default function BarsDataset() {
   }, []);
 
   if (loading) return <div>Loading...</div>;
-
+  // Filter out invalid players and empty strings
   const validPlayers = players.filter(
     p =>
       typeof p.web_name === 'string' &&
@@ -35,14 +46,15 @@ export default function BarsDataset() {
       typeof p.total_points === 'number' &&
       !isNaN(p.total_points)
   );
+  // Keep only the top 5 players of the season with the most points
   const top5Players = validPlayers
-    .slice() // create a shallow copy so you don't mutate original array
-    .sort((a, b) => b.total_points - a.total_points) // descending sort by total_points
-    .slice(0, 5); // take first 5 players
+    .slice() 
+    .sort((a, b) => b.total_points - a.total_points) 
+    .slice(0, 5);
 
   const chartData = top5Players.map(p => ({
     web_name: p.web_name,
-    total_points: p.total_points,
+    total_points: p.total_points
   }));
  
   return (
@@ -58,8 +70,11 @@ export default function BarsDataset() {
       <BarChart
         dataset={chartData}
         yAxis={chartSetting.yAxis}
-        series={[{ dataKey: 'total_points', label: 'Total points' }]}
+        series={[
+          { dataKey: 'total_points', label: 'Total points'}
+        ]}
         layout="horizontal"
+        grid={{ vertical: true }}
         {...chartSetting}
       />
     </Box>

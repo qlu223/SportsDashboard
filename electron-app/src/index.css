@@ -37,3 +37,14 @@ table, th, td {
   color: var(--hover);
   text-decoration: underline;
 }
+h5{
+  text-align: center;
+}
+#underline{
+  text-decoration: underline;
+}
+#vertical-tabpanel-0 > div > p > div > div.MuiBox-root.css-1w1vbxm > div.MuiBox-root.css-1l1pq2q > h6{
+  background-color: #FFAA00;
+  border-radius: 6px;
+  padding: 5px;
+}

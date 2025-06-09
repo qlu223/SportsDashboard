@@ -8,8 +8,8 @@ import PlayerPage from './PlayerPage.jsx';
 import {House, CalendarCheck,PersonStanding,Shirt, ChartNetwork,ChartNoAxesCombined} from 'lucide-react';
 import TeamPage from './TeamPage.jsx';
 import FixturePage from './FixturePage.jsx';
-import OverviewPage from './OverviewPage.jsx';import DataTable from './PlayerTable3.jsx';
-
+import OverviewPage from './OverviewPage.jsx';
+//Reference: https://mui.com/material-ui/react-tabs/
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -68,9 +68,11 @@ export default function VerticalTabs() {
             paddingTop: '16px',
             justifyContent: 'center',
             display: 'flex',
+            color: 'white'
           }}>
-        <img src="./images/placeholder.png" alt="Logo" style={{ width: '40px' }} />
+        <h1>Scrimmage</h1>
         </Box>
+          
         <Tabs
             orientation="vertical"
             variant="scrollable"
@@ -126,24 +128,22 @@ export default function VerticalTabs() {
         </Tabs>
       </Box>
         
-        <Box 
-          sx = {{
-            flexGrow: 1,
-            overflowY: 'auto',    
-            height: '100vh',
-            
-           }}>
+      <Box 
+        sx = {{
+          flexGrow: 1,
+          overflowY: 'auto',    
+          height: '100vh',
+          
+          }}>
 
         <TabPanel value={value} index={0}>
-            <h2>Fantasy Overview</h2>
             <OverviewPage />
-
         </TabPanel>
         <TabPanel value={value} index={1}>
             <FixturePage />
         </TabPanel>
         <TabPanel value={value} index={2}>
-            <DataTable />
+            <PlayerPage />
         </TabPanel>
         <TabPanel value={value} index={3}>
             <TeamPage />

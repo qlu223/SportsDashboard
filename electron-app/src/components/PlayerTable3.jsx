@@ -1,15 +1,37 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
-
+import Tooltip from '@mui/material/Tooltip';
+//Reference: https://mui.com/x/react-data-grid/
 const columns = [
-  { field: 'name', headerName: 'Name', minWidth: 170 },
-  { field: 'team', headerName: 'Team', minWidth: 100 },
-  { field: 'position', headerName: 'Position', minWidth: 100 },
+  { field: 'name', 
+    headerName: 'Name', 
+    minWidth: 170 },
+  { field: 'team', 
+    headerName: 'Team',
+    minWidth: 100 },
+  { field: 'position', 
+    headerName: 'Position',
+    renderCell: (params) => {
+    const fullNames = {
+      GK: 'Goalkeeper',
+      DEF: 'Defender',
+      MID: 'Midfielder',
+      FWD: 'Forward',
+    };
+
+    return (
+      <Tooltip title={fullNames[params.value] || 'Unknown'}>
+        <span>{params.value}</span>
+      </Tooltip>
+    );
+  },
+     minWidth: 100 },
   {
     field: 'goals',
     headerName: 'Goals',
     minWidth: 170,
+    description: "Total goals scored by the player",
     align: 'left',
     format: (value) => value.toLocaleString('en-US'),
   },
@@ -86,7 +108,7 @@ async function createData(data) {
 }
 
 let rows = await window.fplAPI.getPlayerData();
-
+console.log(rows);
 rows = await createData(rows);
 
 const paginationModel = { page: 0, pageSize: 10 };
@@ -99,7 +121,6 @@ export default function DataTable() {
         columns={columns}
         initialState={{ pagination: { paginationModel } }}
         pageSizeOptions={[10, 20, 50]}
-        checkboxSelection
         sx={{ border: 0 }}
       />
     </Paper>
