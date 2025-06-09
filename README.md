@@ -19,9 +19,12 @@
 
 - Datasets reflecting up-to-date player, team, and fixture statistics
 - Realtime updates as sports events occur
-
-## Todo list:
-
+- A script programmed to regularly pull data from the necessary APIs to update our site
 - Increased customization of datasets (filtering, sorting, visualizations)
 - More text describing how to interact with each tab
-- Detailed view of element in table upon clicking
+- Overview with interactable graphs and widgets
+
+## Did not complete:
+
+- Login functionality
+- A predictive model to estimate future fantasy sports points
